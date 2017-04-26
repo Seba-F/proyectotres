@@ -1,0 +1,8 @@
+<li id="series-<%= series.id %>">
+  <%= link_to gravatar_for(series.user, size: 50), series.user %>
+  <span class="nombre"><%= series.nombre %></span><br>
+  <span class="content"><%= series.content %></span><br>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(series.created_at) %> ago.
+  </span>
+</li>

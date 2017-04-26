@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+users = User.order(:created_at).take(6)
+1.times do
+  content = Faker::Lorem.sentence(5)
+  content = "excelente serie de 7 temporadas"
+  users.each { |user| user.series.create!(content: content, nombre: "walkink dead") }
+end
